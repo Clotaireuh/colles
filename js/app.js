@@ -201,7 +201,7 @@ $('#imp').onchange = async e => {
 const start = () => { $('#login').hidden = true; $('#app').hidden = false; render(); };
 $('#login').onsubmit = e => {
   e.preventDefault();
-  if ($('#pw').value === 'INTERNAUTE') { sessionStorage.ok = 1; start(); } else $('#err').textContent = 'Mot de passe incorrect.';
+  if ($('#pw').value === 'Clotaireuh') { sessionStorage.ok = 1; start(); } else $('#err').textContent = 'Mot de passe incorrect.';
 };
 addEventListener('pagehide', () => S.flush());
 document.addEventListener('visibilitychange', () => { if (document.hidden) S.flush(); });
