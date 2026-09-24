@@ -1,0 +1,55 @@
+/* Thème : encre bleu nuit + accent vert d'ardoise. Variables pour clair/sombre. */
+:root{--bg:#eef1f4;--fg:#14202b;--card:#fff;--bd:#d3dae2;--ac:#0f766e;--acfg:#fff;--dg:#c0392b;--mut:#5b6b7a}
+[data-theme=dark]{--bg:#0f151b;--fg:#e4eaf0;--card:#18212a;--bd:#2a3743;--ac:#3fb8ab;--acfg:#06201d;--dg:#ef6b5b;--mut:#8b9bab}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg)}
+h1,h2,h3{margin:.4em 0;line-height:1.2}
+h1{font-size:1.25rem}h3{font-size:1rem}
+input,select,textarea,button{font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:.5em .7em;min-width:0}
+textarea{width:100%;resize:vertical}
+button{cursor:pointer}
+button:hover{border-color:var(--ac)}
+button.primary,button.on{background:var(--ac);color:var(--acfg);border-color:var(--ac)}
+button.danger{color:var(--dg)}
+button.sm{padding:.2em .5em;font-size:.85rem}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+a{cursor:pointer;color:var(--ac)}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.5rem 0}
+.row>input,.row>select{flex:1 1 180px}
+.sub,small{color:var(--mut)}
+.badge{font-size:.8rem;border:1px solid var(--bd);border-radius:99px;padding:0 .5em;margin-left:.3em}
+
+#login{max-width:320px;margin:20vh auto;display:grid;gap:.7rem;padding:1rem}
+#login[hidden],#app[hidden]{display:none}
+#err{color:var(--dg);margin:0}
+header{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5}
+header h1{margin:0}
+nav{display:flex;gap:.3rem;flex-wrap:wrap}
+main{max-width:900px;margin:0 auto;padding:1rem}
+
+.card{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:.7rem .9rem;margin:.5rem 0}
+.card.on{border-color:var(--ac);border-width:2px}
+.tabs{display:flex;gap:.4rem;margin:.8rem 0}
+.tabs button{flex:1;padding:.7em}
+.grade input{width:5.5em}
+.sec{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:.7rem .9rem;margin:.7rem 0}
+.sec h3{margin-top:0}
+.drop{position:relative;min-height:70px;border:2px dashed var(--bd);border-radius:8px;display:grid;place-items:center;padding:.5rem;margin-bottom:.5rem;text-align:center;color:var(--mut)}
+.drop img{max-width:100%;border-radius:4px}
+.drop .danger{position:absolute;top:.4rem;right:.4rem}
+.cols{display:grid;grid-template-columns:1fr 1.4fr;gap:1rem}
+.stats{display:flex;gap:.6rem}
+.stats div{flex:1;background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:.6rem;color:var(--mut)}
+.stats b{display:block;font-size:1.6rem;color:var(--fg)}
+.form{display:grid;gap:.5rem;max-width:480px}
+ul{padding-left:1.1rem}li{margin:.3rem 0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card)}
+th,td{border:1px solid var(--bd);padding:.5rem;text-align:left}
+
+/* Mode colle : interface épurée, gros champs, sans navigation ni métadonnées */
+.colle nav,.colle .meta,.colle .hc{display:none}
+.colle main{max-width:1100px}
+.colle input,.colle textarea,.colle select{font-size:1.15rem}
+
+@media(max-width:640px){.cols{grid-template-columns:1fr}.stats b{font-size:1.2rem}}
